@@ -38,6 +38,13 @@ function AllLists() {
     return (
         <div>
             <h1>Wunderlist 2.0</h1>
+            <h3>
+                Click once: Cross out
+                <br/>
+                Click twice: Undo cross out
+                <br/>
+                To update, delete, or add: Press edit
+            </h3>
 
             {mainForm.map(todo => (
                 <div 

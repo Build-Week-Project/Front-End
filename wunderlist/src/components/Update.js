@@ -115,7 +115,7 @@ console.log(wunder)
 
 return (
     <div>
-    <h2>Update To Do</h2>
+    <h2>Update or Delete Task</h2>
       <form
        onSubmit={handleSubmit}
        >
@@ -143,7 +143,7 @@ return (
         Delete
       </button>
 
-    <h2>Add New To do</h2>
+    <h2>Add New Task</h2>
 
     <form
           onSubmit={handleSubmit2}

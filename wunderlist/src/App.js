@@ -30,13 +30,23 @@ function App() {
           }
   }, []);
 
+
   return (
   <WunderContext.Provider value={{mainForm, setMainForm}}>	   
     <Router>
       <div className="App">
-      <Link to='/register'>Register</Link>
+      <Link to='/register'
+      // style={!localStorage.getItem('token') ? {} : { display: 'none' }}
+      >Register</Link>
       <br/>
-      <Link to='/login'>Login</Link>
+      <Link to='/login'
+      // style={!localStorage.getItem('token') ? {} : { display: 'none' }}
+      >Login</Link>
+      <br/>
+      {/* <Link 
+      // onClick= {localStorage.clear()} to='/login'
+      // style={localStorage.getItem('token') ? {} : { display: 'none' }}
+      >Log out</Link> */}
       <br/>
       <Link to="/lists">Home</Link>
       </div>
