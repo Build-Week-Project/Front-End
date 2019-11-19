@@ -4,10 +4,16 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import SingleList from './SingleList';
 import WunderContext from '../contexts/WunderContext';
 
+const initialItem = {
+
+    title: "",
+
+    completed: false,
+};
+
 function AllLists() {
 
-    const {mainForm, setMainForm} = useContext(WunderContext);  
-    
+    const {mainForm, setMainForm} = useContext(WunderContext);
 
     // const [wunderlist, setWunderlist] = useState([]);  
 
@@ -32,6 +38,7 @@ function AllLists() {
     return (
         <div>
             <h1>Wunderlist 2.0</h1>
+
             {mainForm.map(todo => (
                 <div 
                 key={todo.id}

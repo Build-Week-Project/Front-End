@@ -19,7 +19,6 @@ function App() {
           .then(response => {
               // setWunderlist(response.data.tasks);
               setMainForm(response.data.tasks);
-              console.log(response.data.tasks);
           })
           .catch(error => {
               console.log(error)
@@ -46,7 +45,7 @@ function App() {
         <Route path='/login' component={Login} />
         <PrivateRoute exact path="/lists" component={AllLists}/>
         <Route
-          path="/update"
+          path="/update/:id"
           render={props => {
           return <Update {...props}/>
           }}  

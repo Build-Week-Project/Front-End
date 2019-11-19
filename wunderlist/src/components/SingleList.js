@@ -20,13 +20,12 @@ function completed (){
 
     return (
         <div>
-
             <h2
             className='line'
             onClick={completed}
             >{title}</h2>
 
-            <p>Date: {created_at}</p>
+            {/* <p>Date: {created_at}</p> */}
             
             {/* <p 
             className='line'
