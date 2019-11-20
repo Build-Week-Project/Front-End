@@ -19,6 +19,7 @@ function App() {
           .then(response => {
               // setWunderlist(response.data.tasks);
               setMainForm(response.data.tasks);
+              console.log('app axios get', response.data);
           })
           .catch(error => {
               console.log(error)

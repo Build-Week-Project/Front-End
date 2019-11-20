@@ -1,9 +1,9 @@
 import React from 'react';
 
 function SingleList(props) {
-    const {id, title, created_at} = props.wList;
+    const {id, title, created_at, completed} = props.wList;
 
-function completed (){
+function completedBtn (){
     var finished = document.getElementsByClassName('line');
     console.log(finished)
     var finishedArray = Array.from(finished)
@@ -22,22 +22,16 @@ function completed (){
         <div>
             <h2
             className='line'
-            onClick={completed}
+            onClick={completedBtn}
+            // style={!{completed:true} ? {} : {textDecoration : "line-through"}}
             >{title}</h2>
 
-            {/* <p>Date: {created_at}</p> */}
+            <p>Date: {created_at}</p>
             
-            {/* <p 
-            className='line'
-            onClick={completed}  
-            >Age: {age}
-            </p>
-
             <p 
-            className='line'
-            onClick={completed}  
-            >Email: {email}
-            </p> */}
+            className='line' 
+            >Completed: {completed}
+            </p>
             
             <button
              onClick={() => props.history.push(`/update/${id}`)}

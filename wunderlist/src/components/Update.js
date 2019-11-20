@@ -8,6 +8,8 @@ const initialItem = {
 
     completed: false,
 
+    created_at: "",
+
 };
 
 const Update = props => {
@@ -115,6 +117,7 @@ return (
       <form
        onSubmit={handleSubmit}
        >
+        <h3>Title: enter title</h3>
         <input
           type="text"
           name="title"
@@ -122,13 +125,24 @@ return (
           placeholder="title"
           value={wunder.title}
         />
-        {/* <input
+        <h3>Completed: enter true or false</h3>
+        <input
           type="boolean"
           name="completed"
           onChange={changeHandler}
           placeholder="completed"
           value={wunder.completed}
-        /> */}
+        />
+        <h3>Date: enter mm-dd-yyyy</h3>
+        <input
+          type="text"
+          name="created_at"
+          onChange={changeHandler}
+          placeholder="created_at"
+          value={wunder.created_at}
+        />
+
+
         <button>Update</button>
       </form>
 

@@ -53,10 +53,11 @@ function AllLists() {
     return (
         <div>
             <h1>Wunderlist 2.0</h1>
+            <h2>How to use</h2>
             <h3>
-                Mark Complete: Click once
+                To crossout a task: Click once
                 <br/>
-                Undo Complete: Click Twice
+                To undo crossout: Click Twice
                 <br/>
                 To update, delete, or add: Press edit.
                 <br/>
