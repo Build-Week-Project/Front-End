@@ -7,6 +7,7 @@ const initialItem = {
     title: "",
 
     completed: false,
+
 };
 
 const Update = props => {
@@ -51,8 +52,7 @@ const Update = props => {
           .get('https://wunderlist-2-0-be.herokuapp.com/api/todo/tasks')
           .then(response => {
             setMainForm(response.data.tasks)});
-
-          props.history.push(`/lists`);
+            props.history.push(`/lists`);
         })
         .catch(err => console.log(err));
     };
@@ -67,12 +67,9 @@ const Update = props => {
           .get('https://wunderlist-2-0-be.herokuapp.com/api/todo/tasks')
           .then(response => {
             setMainForm(response.data.tasks)});
-
-          props.history.push("/lists");
+            props.history.push("/lists");
         })
-        .catch(error => {
-          console.log(error);
-        })
+        .catch(error => console.log(error));
     }
 
     const postNewWunder = arg => {
@@ -89,8 +86,7 @@ const Update = props => {
           .get('https://wunderlist-2-0-be.herokuapp.com/api/todo/tasks')
           .then(response => {
             setMainForm(response.data.tasks)});
-
-          props.history.push("/lists");
+            props.history.push("/lists");
 
         })
         .catch(error => {
@@ -133,7 +129,6 @@ return (
           placeholder="completed"
           value={wunder.completed}
         /> */}
-
         <button>Update</button>
       </form>
 
@@ -146,26 +141,26 @@ return (
     <h2>Add New Task</h2>
 
     <form
-          onSubmit={addHandleSubmit}
-          >
-              <input
-              type="text"
-              name="title"
-              onChange={changeHandler}
-              placeholder="title"
-              value={wunder.title}
-              />
+      onSubmit={addHandleSubmit}
+    >
+      <input
+      type="text"
+      name="title"
+      onChange={changeHandler}
+      placeholder="title"
+      value={wunder.title}
+      />
 
-              {/* <input
-              type="boolean"
-              name="completed"
-              onChange={changeHandler}
-              placeholder="enter true or false"
-              value={wunder.completed}
-              /> */}
+      {/* <input
+      type="boolean"
+      name="completed"
+      onChange={changeHandler}
+      placeholder="enter true or false"
+      value={wunder.completed}
+      /> */}
 
-              <button>Add</button>
-          </form>
+      <button>Add</button>
+    </form>
     </div>
   );
 };

@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import axios from "axios";
+import WunderContext from '../contexts/WunderContext';
 
 const Login = props =>{
+
+  const {mainForm, setMainForm} = useContext(WunderContext);  
 
   const [state, setState] = useState({
     credentials: {
@@ -30,6 +33,12 @@ const Login = props =>{
 
           localStorage.setItem("token", data.token);
           setState({ ...state, isLoggedIn: true });
+
+          axiosWithAuth()
+          .get('https://wunderlist-2-0-be.herokuapp.com/api/todo/tasks')
+          .then(response => {
+            setMainForm(response.data.tasks)});
+
           props.history.push('/lists');
       })
   }

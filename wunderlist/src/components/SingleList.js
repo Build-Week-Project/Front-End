@@ -44,9 +44,7 @@ function completed (){
              >
              Edit
             </button>
-        </div>
-
-        
+        </div>    
     )
 }
 

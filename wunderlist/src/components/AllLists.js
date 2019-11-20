@@ -54,9 +54,9 @@ function AllLists() {
         <div>
             <h1>Wunderlist 2.0</h1>
             <h3>
-                Click once: Cross out.
+                Mark Complete: Click once
                 <br/>
-                Click twice: Undo cross out.
+                Undo Complete: Click Twice
                 <br/>
                 To update, delete, or add: Press edit.
                 <br/>
@@ -64,7 +64,7 @@ function AllLists() {
             </h3>
 
             <Link to="/search">
-            <h2>Search Tasks Link</h2>
+            <h2>Search Tasks Link =></h2>
             </Link>
 
             {/* <form>

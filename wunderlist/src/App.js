@@ -7,7 +7,6 @@ import Login from './components/Login';
 import Update from './components/Update';
 import Search from './components/Search';
 import AllLists from './components/AllLists';
-import SingleList from './components/SingleList';
 import WunderContext from './contexts/WunderContext';
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -31,44 +30,37 @@ function App() {
           }
   }, []);
 
-
   return (
   <WunderContext.Provider value={{mainForm, setMainForm}}>	   
     <Router>
       <div className="App">
-      <Link to='/register'
-      // style={!localStorage.getItem('token') ? {} : { display: 'none' }}
-      >Register</Link>
-      <br/>
-      <Link to='/login'
-      // style={!localStorage.getItem('token') ? {} : { display: 'none' }}
-      >Login</Link>
-      <br/>
-      {/* <Link 
-      // onClick= {localStorage.clear()} to='/login'
-      // style={localStorage.getItem('token') ? {} : { display: 'none' }}
-      >Log out</Link> */}
-      <br/>
-      <Link to="/lists">Home</Link>
-      </div>
-      <Switch>
-        <Route path='/register' component={Register} />
-        <Route path='/login' component={Login} />
-        <Route path='/search' component={Search} />
-        <PrivateRoute exact path="/lists" component={AllLists}/>
-        <Route
-          path="/update/:id"
-          render={props => {
-          return <Update {...props}/>
-          }}  
-          /> 
-        {/* <Route
-        path="/todo/tasks/:id"
-        render={props => {
-          return <SingleList {...props}/>;
-        }}  
-      />   */}
-      </Switch>
+        <Link to='/register'
+        style={!localStorage.getItem('token') ? {} : { display: 'none' }}
+        >Register</Link>
+        <br/>
+        <Link to='/login'
+        style={!localStorage.getItem('token') ? {} : { display: 'none' }}
+        >Login</Link>
+        <br/>
+        <Link to='/login'
+        onClick ={() => localStorage.clear()} 
+        style={!localStorage.getItem('token') ? {display: 'none'} : {}}
+        >Log out</Link> 
+        <br/>
+        <Link to="/lists">Home</Link>
+        </div>
+        <Switch>
+          <Route path='/register' component={Register} />
+          <Route path='/login' component={Login} />
+          <Route path='/search' component={Search} />
+          <PrivateRoute exact path="/lists" component={AllLists}/>
+          <Route
+            path="/update/:id"
+            render={props => {
+            return <Update {...props}/>
+            }}  
+            /> 
+        </Switch>
     </Router>
   </WunderContext.Provider>    
   );
