@@ -34,17 +34,54 @@ function AllLists() {
     //             console.info('Logged in.');
     //         }
     // }, []);
-    
+
+    // const [searchTerm, setSearchTerm] = useState("");
+    // const [searchResults, setSearchResults] = useState([]);
+
+    // const searchHandleChange = event => {
+    // event.preventDefault();
+    // setSearchTerm(event.target.value);
+    // };
+
+    // useEffect(() => {
+    // const results = mainForm.filter(dataObject =>
+    //     dataObject.title.toLowerCase().includes(searchTerm.toLowerCase())
+    //     );  
+    // setSearchResults(results)
+    // }, [searchTerm]);
+        
     return (
         <div>
             <h1>Wunderlist 2.0</h1>
             <h3>
-                Click once: Cross out
+                Click once: Cross out.
                 <br/>
-                Click twice: Undo cross out
+                Click twice: Undo cross out.
                 <br/>
-                To update, delete, or add: Press edit
+                To update, delete, or add: Press edit.
+                <br/>
+                To search, press the search link below.
             </h3>
+
+            <Link to="/search">
+            <h2>Search Tasks Link</h2>
+            </Link>
+
+            {/* <form>
+            <input
+                type="text"
+                name="search"
+                placeholder="Search Task"
+                value={searchTerm}
+                onChange={searchHandleChange}
+            />
+            </form>
+            {searchResults.map((data) => (
+            <div key={data.id}> */}
+                {/* {data.title} */}
+                {/* <Route render={props => {return <SingleList {...props} wList={data} />}} />
+                </div> 
+            ))} */}
 
             {mainForm.map(todo => (
                 <div 

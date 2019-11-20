@@ -98,7 +98,7 @@ const Update = props => {
         });
     };
 
-    const handleSubmit2 = e => {
+    const addHandleSubmit = e => {
       e.preventDefault();
       postNewWunder(wunder);
       //resetting form
@@ -110,11 +110,11 @@ const Update = props => {
 // if (mainForm.length === 0) {
 //   return <h2>Loading data...</h2>;
 // }
-
 console.log(wunder)
 
 return (
     <div>
+
     <h2>Update or Delete Task</h2>
       <form
        onSubmit={handleSubmit}
@@ -146,7 +146,7 @@ return (
     <h2>Add New Task</h2>
 
     <form
-          onSubmit={handleSubmit2}
+          onSubmit={addHandleSubmit}
           >
               <input
               type="text"

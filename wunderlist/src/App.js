@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Register from './components/Register';
 import Login from './components/Login';
 import Update from './components/Update';
+import Search from './components/Search';
 import AllLists from './components/AllLists';
 import SingleList from './components/SingleList';
 import WunderContext from './contexts/WunderContext';
@@ -53,6 +54,7 @@ function App() {
       <Switch>
         <Route path='/register' component={Register} />
         <Route path='/login' component={Login} />
+        <Route path='/search' component={Search} />
         <PrivateRoute exact path="/lists" component={AllLists}/>
         <Route
           path="/update/:id"
