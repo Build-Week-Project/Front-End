@@ -55,11 +55,11 @@ function AllLists() {
             <h1>Wunderlist 2.0</h1>
             <h2>How to use</h2>
             <h3>
-                To crossout a task: Click once
+                {/* To crossout a task: click once
                 <br/>
-                To undo crossout: Click Twice
-                <br/>
-                To update, delete, or add: Press edit.
+                To undo crossout: click twice
+                <br/> */}
+                To update, delete, or add: press edit.
                 <br/>
                 To search, press the search link below.
             </h3>

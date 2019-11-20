@@ -102,7 +102,8 @@ const Update = props => {
       //resetting form
       setWunder({ 
         title: "", 
-        completed: false, });
+        completed: false,
+        created_at: "" });
       };
 
 // if (mainForm.length === 0) {
@@ -125,22 +126,29 @@ return (
           placeholder="title"
           value={wunder.title}
         />
-        <h3>Completed: enter true or false</h3>
+        <h3>Completed:</h3>
+        {/* <input type="checkbox" name="completed" checked={false} value={wunder.completed}/> */}
+        {/* <select value={wunder.completed} onChange={changeHandler}>
+          <option value={true}>Yes</option>
+          <option value={false}>No</option>
+        </select> */}
+
         <input
-          type="boolean"
+          type="text"
           name="completed"
           onChange={changeHandler}
           placeholder="completed"
           value={wunder.completed}
         />
-        <h3>Date: enter mm-dd-yyyy</h3>
+
+        {/* <h3>Date:</h3>
         <input
-          type="text"
+          type="datetime"
           name="created_at"
           onChange={changeHandler}
           placeholder="created_at"
           value={wunder.created_at}
-        />
+        /> */}
 
 
         <button>Update</button>
