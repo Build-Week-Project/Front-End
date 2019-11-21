@@ -138,8 +138,8 @@ return (
         /> */}
         </FormGroup>
         <Row>
-            <Button style={{margin: "2%"}}>Update</Button>
-            <Button onClick={deleteList} style={{margin: "2%"}}>
+            <Button style={{backgroundColor: "#73628A", margin: "2%"}}>Update</Button>
+            <Button onClick={deleteList} style={{backgroundColor: "#73628A", margin: "2%"}}>
                 Delete
             </Button>
         </Row>
@@ -156,7 +156,7 @@ return (
       placeholder="enter true or false"
       value={wunder.completed}
       /> */}
-      <Button style={{margin: "2%"}}>Add</Button>
+      <Button style={{backgroundColor: "#73628A", margin: "2%"}}>Add</Button>
       </FormGroup>
     </Form>
     </div>
