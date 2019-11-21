@@ -53,21 +53,22 @@ function AllLists() {
         
     return (
         <div style={{margin: "5% 25%"}}>
-            <h2>How to use</h2>
-            <h3>
+            <div style={{display: "flex"}}>
+            <h2 style={{margin: "0 4%"}}>Welcome to Your Wunderlist</h2>
+            {/* <h3>
                 {/* To crossout a task: click once
                 <br/>
                 To undo crossout: click twice
                 <br/> */}
-                To update, delete, or add: press edit.
+                {/* To update, delete, or add: press edit.
                 <br/>
                 To search, press the search link below.
-            </h3>
+            </h3> */}
 
             <Link to="/search">
             <Button style={{backgroundColor: "#73628A"}}>Search Tasks</Button>
             </Link>
-
+            </div>
             {/* <form>
             <input
                 type="text"
