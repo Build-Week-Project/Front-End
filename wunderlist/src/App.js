@@ -52,6 +52,11 @@ function App() {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
+              <NavLink>
+                <Link to='/login' onClick ={() => localStorage.clear()} style={!localStorage.getItem ('token') ? {display: 'none'} : {color: "#313D5A"}}>
+                  Log out
+                </Link>
+              </NavLink>
               <NavItem>
                 <NavLink>
                   <Link to='/register' style={!localStorage.getItem('token') ? {color: "#313D5A"} : { display: 'none' }}>
@@ -63,11 +68,6 @@ function App() {
                 <NavLink>
                   <Link to='/login' style={!localStorage.getItem('token') ? {color: "#313D5A"} : { display: 'none' }}>
                     Login
-                  </Link>
-                </NavLink>
-                <NavLink>
-                  <Link to='/login' onClick ={() => localStorage.clear()} style={!localStorage.getItem ('token') ? {display: 'none'} : {color: "#313D5A"}}>
-                    Log out
                   </Link>
                 </NavLink>
               </NavItem>

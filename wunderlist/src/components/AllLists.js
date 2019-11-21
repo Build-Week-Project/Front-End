@@ -3,6 +3,7 @@ import { axiosWithAuth } from '../utils/axiosWithAuth';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import SingleList from './SingleList';
 import WunderContext from '../contexts/WunderContext';
+import {Button} from 'reactstrap';
 
 const initialItem = {
 
@@ -64,7 +65,7 @@ function AllLists() {
             </h3>
 
             <Link to="/search">
-            <h2>Search Tasks Link =></h2>
+            <Button style={{backgroundColor: "#73628A"}}>Search Tasks</Button>
             </Link>
 
             {/* <form>
