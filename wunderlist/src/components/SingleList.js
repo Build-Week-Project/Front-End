@@ -28,7 +28,7 @@ function SingleList(props) {
             >{title}</h2>
             <p>Date: {created_at}</p>
             {/* <h3>Completed: {completed}</h3> */}
-            <Button onClick={() => props.history.push(`/update/${id}`)}>
+            <Button style={{backgroundColor: "#73628A"}} onClick={() => props.history.push(`/update/${id}`)}>
                 Edit
             </Button>
         </div>    

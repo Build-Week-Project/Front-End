@@ -50,7 +50,7 @@ function Register(props) {
             </FormGroup>
             <FormGroup row>
                 <Col>
-                <Button type="submit">Submit</Button>
+                <Button type="submit" style={{backgroundColor: "#73628A"}}>Submit</Button>
                 </Col>
             </FormGroup>
             </Form>

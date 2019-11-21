@@ -47,26 +47,26 @@ function App() {
   <WunderContext.Provider value={{mainForm, setMainForm}}>	   
     <Router>
       <div className="App">
-        <Navbar color="light" light expand="md">
+        <Navbar style={{background: "#EAEAEA", color: "#CBC5EA"}} light expand="md">
           <NavbarBrand href="/lists">Wunderlist 2.0</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
                 <NavLink>
-                  <Link to='/register' style={!localStorage.getItem('token') ? {} : { display: 'none' }}>
+                  <Link to='/register' style={!localStorage.getItem('token') ? {color: "#313D5A"} : { display: 'none' }}>
                     Register
                   </Link>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink>
-                  <Link to='/login' style={!localStorage.getItem('token') ? {} : { display: 'none' }}>
+                  <Link to='/login' style={!localStorage.getItem('token') ? {color: "#313D5A"} : { display: 'none' }}>
                     Login
                   </Link>
                 </NavLink>
                 <NavLink>
-                  <Link to='/login' onClick ={() => localStorage.clear()} style={!localStorage.getItem ('token') ? {display: 'none'} : {}}>
+                  <Link to='/login' onClick ={() => localStorage.clear()} style={!localStorage.getItem ('token') ? {display: 'none'} : {color: "#313D5A"}}>
                     Log out
                   </Link>
                 </NavLink>

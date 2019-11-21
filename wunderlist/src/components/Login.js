@@ -66,7 +66,7 @@ const Login = props =>{
         </FormGroup>
         <FormGroup row>
             <Col>
-                <Button type="submit">Log In</Button>
+                <Button type="submit" style={{backgroundColor: "#73628A"}}>Log In</Button>
             </Col>
         </FormGroup>
         </Form>
