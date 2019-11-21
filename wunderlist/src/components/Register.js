@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import axios from 'axios';
-import { Col, Button, Row, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
+import { Col, Button, Row, Form, FormGroup, Input } from 'reactstrap';
+
 
 function Register(props) {
     const [user, setUser] = useState({first_name: '', last_name: '', email: '', password: ''});
@@ -11,7 +12,7 @@ function Register(props) {
 
     const submitForm = e => {
         e.preventDefault();
-        axios.post('/users/register', user)
+        axiosWithAuth().post('https://wunderlist-2-0-be.herokuapp.com/api/auth/register', user)
             .then(response => {
                 props.history.push('/login')
             })
