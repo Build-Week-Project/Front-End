@@ -126,7 +126,7 @@ return (
           placeholder="title"
           value={wunder.title}
         />
-        <h3>Completed:</h3>
+        <h3>Completed: enter true or false</h3>
         {/* <input type="checkbox" name="completed" checked={false} value={wunder.completed}/> */}
         {/* <select value={wunder.completed} onChange={changeHandler}>
           <option value={true}>Yes</option>
