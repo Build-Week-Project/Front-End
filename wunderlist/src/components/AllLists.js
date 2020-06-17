@@ -3,7 +3,9 @@ import { axiosWithAuth } from '../utils/axiosWithAuth';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import SingleList from './SingleList';
 import WunderContext from '../contexts/WunderContext';
+
 import {Button} from 'reactstrap';
+
 
 const initialItem = {
 
@@ -52,14 +54,17 @@ function AllLists() {
     // }, [searchTerm]);
         
     return (
+
         <div style={{margin: "5% 25%"}}>
             <div style={{display: "flex"}}>
             <h2 style={{margin: "0 4%"}}>Welcome to Your Wunderlist</h2>
             {/* <h3>
+
                 {/* To crossout a task: click once
                 <br/>
                 To undo crossout: click twice
                 <br/> */}
+
                 {/* To update, delete, or add: press edit.
                 <br/>
                 To search, press the search link below.
@@ -69,6 +74,7 @@ function AllLists() {
             <Button style={{backgroundColor: "#73628A"}}>Search Tasks</Button>
             </Link>
             </div>
+
             {/* <form>
             <input
                 type="text"
@@ -84,7 +90,9 @@ function AllLists() {
                 {/* <Route render={props => {return <SingleList {...props} wList={data} />}} />
                 </div> 
             ))} */}
+
             <div style={{border: "solid 2px black", margin: "5% auto", padding: "4%", borderRadius: "5%"}}>
+
             {mainForm.map(todo => (
                 <div 
                 key={todo.id}
@@ -93,7 +101,9 @@ function AllLists() {
                     <Route render={props => {return <SingleList {...props} wList={todo} />}} />
                 </div>
             ))}
+
             </div>
+
         </div>
     )
 }

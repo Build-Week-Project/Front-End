@@ -2,7 +2,9 @@ import React, { useContext, useState, useEffect } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import axios from "axios";
 import WunderContext from '../contexts/WunderContext';
+
 import { Col, Button, Form, FormGroup, Input } from 'reactstrap';
+
 
 const Login = props =>{
 
@@ -52,6 +54,7 @@ const Login = props =>{
 
   return (
     <div>
+
       <Form onSubmit={loginEvent} style={{margin: "5% 25%"}}>
         <h2>{state.isLoggedIn ? "Logged In" : "Please login"}</h2>
         <FormGroup row>
@@ -70,6 +73,7 @@ const Login = props =>{
             </Col>
         </FormGroup>
         </Form>
+
     </div>
   );
 

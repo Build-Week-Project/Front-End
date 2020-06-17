@@ -9,6 +9,7 @@ import Search from './components/Search';
 import AllLists from './components/AllLists';
 import WunderContext from './contexts/WunderContext';
 import PrivateRoute from "./components/PrivateRoute";
+
 import {Collapse,
   Navbar,
   NavbarToggler,
@@ -23,6 +24,7 @@ function App() {
   // These two lines are to toggle the Menu options
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
 
   const [mainForm, setMainForm] = useState([]);
 
@@ -47,6 +49,7 @@ function App() {
   <WunderContext.Provider value={{mainForm, setMainForm}}>	   
     <Router>
       <div className="App">
+
         <Navbar style={{background: "#EAEAEA", color: "#CBC5EA"}} light expand="md">
           <NavbarBrand href="/lists">Wunderlist 2.0</NavbarBrand>
           <NavbarToggler onClick={toggle} />
@@ -74,6 +77,7 @@ function App() {
             </Nav>
           </Collapse>
         </Navbar>
+
         </div>
         <Switch>
           <Route path='/register' component={Register} />
@@ -92,4 +96,6 @@ function App() {
   );
 }
 
+
 export default App;
+

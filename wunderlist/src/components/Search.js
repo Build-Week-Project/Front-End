@@ -2,7 +2,9 @@ import React, { useContext, useState, useEffect } from 'react';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import SingleList from './SingleList';
 import WunderContext from '../contexts/WunderContext';
+
 import {Form, Input} from 'reactstrap';
+
 
 function Search() {
 
@@ -24,16 +26,19 @@ function Search() {
     }, [searchTerm]);
         
     return (
+
         <div style={{margin: "5% 25%"}}>
             <h2>Search Task</h2>
             <Form style={{marginBottom: "3%"}}>
             <Input
+
                 type="text"
                 name="search"
                 placeholder="Search Task"
                 value={searchTerm}
                 onChange={searchHandleChange}
             />
+
             </Form>
             <div style={{border: "solid 2px black", margin: "5% auto", padding: "4%", borderRadius: "5%"}}>
             {searchResults.map((data) => (
@@ -43,6 +48,7 @@ function Search() {
                 </div>
             ))}
             </div> 
+
         </div>
     )
 }

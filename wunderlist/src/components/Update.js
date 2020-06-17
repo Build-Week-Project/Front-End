@@ -1,7 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import WunderContext from '../contexts/WunderContext';
+
 import {Form, Input, Button, FormGroup, Row} from 'reactstrap';
+
 
 const initialItem = {
 
@@ -113,6 +115,7 @@ const Update = props => {
 console.log(wunder)
 
 return (
+
     <div style={{margin: "5% 25%"}}>
     <h2 style={{margin: "5% auto"}}>Update or Delete Task</h2>
       <Form onSubmit={handleSubmit}>
@@ -121,21 +124,25 @@ return (
             <Input type="text" name="title" onChange={changeHandler} placeholder="title" value={wunder.title} />
         </FormGroup>
         <FormGroup row>
+
         <h3>Completed: enter true or false</h3>
         {/* <input type="checkbox" name="completed" checked={false} value={wunder.completed}/> */}
         {/* <select value={wunder.completed} onChange={changeHandler}>
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select> */}
+
         <Input type="text" name="completed" onChange={changeHandler} placeholder="completed" value={wunder.completed} />
         {/* <h3>Date:</h3>
         <Input
+
           type="datetime"
           name="created_at"
           onChange={changeHandler}
           placeholder="created_at"
           value={wunder.created_at}
         /> */}
+
         </FormGroup>
         <Row>
             <Button style={{backgroundColor: "#73628A", margin: "2%"}}>Update</Button>
@@ -150,15 +157,18 @@ return (
         <FormGroup row>
       <Input type="text" name="title" onChange={changeHandler} placeholder="title" value={wunder.title} />
       {/* <Input
+
       type="boolean"
       name="completed"
       onChange={changeHandler}
       placeholder="enter true or false"
       value={wunder.completed}
       /> */}
+
       <Button style={{backgroundColor: "#73628A", margin: "2%"}}>Add</Button>
       </FormGroup>
     </Form>
+
     </div>
   );
 };

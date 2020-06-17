@@ -7,11 +7,14 @@ function Register(props) {
     const [user, setUser] = useState({first_name: '', last_name: '', email: '', password: ''});
 
     const handleChanges = e => {
+
+
         setUser({ ...user, [e.target.name]: e.target.value });
       };
 
     const submitForm = e => {
         e.preventDefault();
+
         axiosWithAuth().post('https://wunderlist-2-0-be.herokuapp.com/api/auth/register', user)
             .then(response => {
                 props.history.push('/login')
@@ -20,6 +23,7 @@ function Register(props) {
                 console.log(error)
                 setUser({first_name: '', last_name: '', email: '', password: ''})
             })
+
     };
 
     return (
@@ -46,6 +50,7 @@ function Register(props) {
             <FormGroup row>
                 <Col sm={8}>
                 <Input type="password" name="password" id="password" placeholder="Password" value={user.password} onChange={handleChanges} />
+
                 </Col>
             </FormGroup>
             <FormGroup row>
